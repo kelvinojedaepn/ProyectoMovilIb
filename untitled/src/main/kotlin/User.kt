@@ -4,7 +4,7 @@ data class User(
     val salary: Double = 0.0,
     val isMen: Boolean,
     val estadoCivil: Char = 'S',
-    val listaCarros: ArrayList<Car> = arrayListOf<Car>()
+    var listaCarros: ArrayList<Car>
 ) {
 
     public fun addCar(car: Car) {
