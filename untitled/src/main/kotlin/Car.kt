@@ -1,9 +1,10 @@
-public class Car(
-    val doorNumber: Int,
+data class Car(
+    var doorNumber: Int,
     var mileage: Double,
     var isNew: Boolean = true,
     var carLicense: String,
-    var beginCarLicense: Char
+    var beginCarLicense: Char,
+    var ownerId: String = ""
 ) {
     fun changeMileage(mileageMod: Double){
         this.mileage = mileageMod
@@ -17,7 +18,11 @@ public class Car(
     }
 
     override fun toString(): String {
-        return "Car(doorNumber=$doorNumber, mileage=$mileage, isNew=$isNew, carLicense='$carLicense', beginCarLicense=$beginCarLicense)"
+        return "Numero puertas: $doorNumber\n" +
+                "Kilometros recorridos: $mileage\n" +
+                "Es nuevo: $isNew\n" +
+                "Licencia de carro: '$carLicense\n'" +
+                "Inicial licencia de carro: ${carLicense.get(0)}\n"
     }
 
 
